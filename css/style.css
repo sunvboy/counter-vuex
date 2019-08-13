@@ -1,0 +1,926 @@
+*{
+    margin: auto;
+    padding: auto;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+
+}
+
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+
+}
+
+.san-pham-sale a {
+    text-decoration: none;
+}
+
+/*Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+    .topnav {
+        background-color: antiquewhite;
+        color: #000;
+        font-weight: 600;
+        font-size: 0.8rem;
+        padding: 5px;
+    }
+
+    header {
+        box-shadow: 0px 0px 25px -10px #000000b8;
+        z-index: 9999;
+        position: relative;
+    }
+
+    .search-input-header {
+        border: none;
+        border-bottom: 1px solid #000;
+        border-radius: 0px;
+        width: 195px !important;
+        background-color: #fff0;
+    }
+
+    .hilight-left img {
+        width: 100%;
+    }
+
+    .hilight-right img {
+        width: 100%;
+    }
+
+    .hilight-left {
+        padding: 0px 60px 0px 0px;
+    }
+
+    .anhsanpham img {
+        width: 100%;
+    }
+
+    .product-name h2 {
+        font-weight: 600;
+        font-size: 1.7rem;
+    }
+
+    .product-price span {
+        font-size: 1.3rem;
+        font-weight: 800;
+    }
+
+    .product-code {
+        margin-top: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .product-status{
+        font-size: 0.9rem;
+    }
+
+    .product-code span {
+        font-weight: 600;
+    }
+
+    .product-color {
+        margin-top: 25px;
+    }
+
+    .product-color img {
+        border-radius: 23px;
+        width: 25px;
+        border: 2px solid #b9b9b9;
+    }
+
+    .product-size {
+        margin-top: 25px;
+        user-select: none;
+    }
+
+    .product-dosize {
+        margin-top: 30px;
+        cursor: pointer;
+    }
+
+    .product-sales-info {
+        margin-top: 100px;
+    }
+
+    .product-size span {
+        margin-right: 17px;
+        cursor: pointer;
+    }
+
+    .product-size span.color-select {
+        font-weight: 600;
+        font-size: 1.3rem;
+    }
+
+    .product-size span.hethang {
+        color: #adadad;
+        cursor: default;
+    }
+
+    .product-sales-info {
+        background-color: #ffcfcf;
+        font-weight: 600;
+    }
+
+    .ship-info-content .noidung {
+        width: 90%;
+        margin: 0px;
+        float: left;
+    }
+
+    .mysize-box {
+        border: 2px solid #000;
+        padding: 20px;
+    }
+
+    span.number-mysize {
+        display: block;
+        font-size: 3.5rem !important;
+        padding: 1rem;
+        margin: auto;
+        font-weight: 600;
+    }
+
+    .asymmetric img {
+        float: left;
+        padding: 0px 15px;
+    }
+
+    .des-asymmetric span {
+        font-size: 0.9rem;
+    }
+
+    .goiy-kieudang>p {
+        font-weight: 600;
+    }
+
+    .goiy-kieudang table {
+        display: -webkit-box;
+    }
+
+    .goiy-kieudang td {
+        padding-right: 14px;
+    }
+
+    .asymmetric {
+        padding: 20px 0px;
+    }
+
+    .des-asymmetric {
+        float: initial;
+        padding: 15px 0px;
+    }
+
+    .des-asymmetric p {
+        font-weight: 600;
+    }
+
+    .mysize-box a {
+        text-decoration: underline;
+        color: #000;
+        font-size: 0.9rem;
+    }
+
+    p.des-mysize {
+        font-size: 0.9rem !important;
+        font-weight: 400 !important;
+        margin-bottom: 25px !important;
+    }
+
+    section.mysize {
+        background-color: #F8EEE8;
+    }
+
+    .mysize-box p {
+        font-weight: 600;
+        font-size: 1.5rem;
+        margin: 0px;
+        margin-top: 15px;
+    }
+
+    .mysize-box span {
+        font-size: 0.8rem;
+    }
+
+
+    .ship-info-content i {
+        width: 8%;
+        float: left;
+        padding: 0px;
+    }
+
+    .tongtien span {
+        float: left;
+        font-weight: 600;
+        font-size: 1.2rem;
+    }
+
+    .tongtien p {
+        float: right;
+        font-weight: 600;
+        font-size: 1.4rem;
+    }
+
+    .ship-info-content .noidung span {
+        font-size: 0.9rem;
+        color: #6f6f6f;
+    }
+
+    .ship-info-content .noidung h4 {
+        font-size: 0.9rem;
+        font-weight: 600;
+        margin: 0px;
+    }
+
+    .product-buy button {
+        width: 100%;
+        height: 58px;
+        background-color: #000;
+        color: #fff;
+        font-size: 1.3rem;
+        border: none;
+        font-weight: 600;
+    }
+
+    .ship-info-content {
+        padding: 25px 0px 0px 0px;
+        display: flex;
+    }
+
+    .product-mota h4 {
+        text-align: center;
+        background-color: #000;
+        padding: 10px;
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #fff;
+    }
+
+    .product-tuvan input {
+        width: 100%;
+        padding: 6px 16px;
+        margin-bottom: 10px;
+        margin-top: 18px;
+    }
+
+    .reviewer h5 {
+        font-size: 1rem;
+        font-weight: 600;
+        margin: 3px 0px;
+    }
+
+    .reviewer i {
+        color: #4ae86e;
+    }
+
+    .review {
+        border-bottom: 1px solid #d0d0d0;
+        padding: 15px;
+    }
+
+    .review .star {
+        color: #868686;
+        font-size: 0.9rem;
+    }
+
+    .breadcrumb {
+        background-color: #fff0;
+    }
+
+    .breadcrumb li {
+        margin: 0px;
+    }
+
+
+    .thongtingiaohang input {
+        width: 100%;
+    }
+
+    .thongtingiaohang select {
+        width: 100%;
+    }
+
+    .thongtingiaohang form>.row {
+        padding: 10px 0px;
+    }
+
+    .phuongthucvanchuyen input[type="radio"] {
+        width: 15px;
+    }
+
+    .ptvc .radio {
+        display: -webkit-inline-box;
+    }
+
+    .ptvc>span {
+        float: right;
+        font-weight: 600;
+    }
+
+    .phuongthucthanhtoan input {
+        width: 15px;
+    }
+
+
+    .phuongthucthanhtoan .radio {
+        display: -webkit-inline-box;
+    }
+
+    .pttt img {
+        width: 80px;
+        padding: 0px 3px;
+    }
+
+    .pttt {
+        font-size: 0.8rem;
+        border: 1px solid #b5b5b5;
+        padding: 15px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+
+    .bottom-thanhtoan button {
+        background-color: #333;
+        color: #fff;
+        border: 0px;
+        padding: 10px;
+    }
+
+    .sanpham-giohang img {
+        height: 115px;
+    }
+
+    input.magiamgia {
+        padding: 7px 15px;
+        width: 100%;
+    }
+
+    button.apdung-magiamgia {
+        background-color: #000;
+        border: none;
+        color: #fff;
+        padding: 9px 20px;
+        width: 100%;
+    }
+
+    .hinh-anh-sp {
+        display: -webkit-inline-box;
+        float: left;
+    }
+
+    .sanpham-giohang .soluong>input {
+        width: 48px !important;
+        padding: 0px 0px 0px 10px;
+    }
+
+    h5.tieude-sp-giohang {
+        width: 60%;
+        margin: 0px;
+        display: -webkit-box;
+        padding: 0px 0px 10px 10px;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    .sanpham-giohang .soluong {
+        display: -webkit-box;
+        padding: 0px 0px 5px 10px;
+    }
+
+    .sanpham-giohang {
+        position: relative;
+        border-bottom: 1px solid #dcdcdc;
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+        margin-left: 20px !important;
+        padding: 0px 0px 13px !important;
+    }
+
+    .size-cart {
+        display: -webkit-inline-box;
+        padding: 0px 0px 5px 10px;
+        margin: 0px;
+        width: 100px;
+    }
+
+    .color-cart img {
+        width: 15px;
+        height: 15px;
+        border-radius: 13px;
+    }
+
+    .color-cart {
+        display: -webkit-inline-box;
+        width: 90px;
+        padding: 0px 0px 5px 10px;
+        margin: 0px;
+    }
+
+    .tamtinh {
+        width: 100%;
+    }
+
+
+    .phivanchuyen {
+        width: 100%;
+    }
+
+    .tamtinh p {
+        float: right;
+        font-weight: 600;
+    }
+    .tamtinh span {
+        float: left;
+    }
+
+    .tinhphi {
+        border-top: 1px solid #dcdcdc;
+    }
+
+    .tongtien {
+        border-top: 1px solid #dcdcdc;
+    }
+
+    .tongtien>div {
+        margin: 0px;
+        width: 100%;
+    }
+
+    .phivanchuyen p {
+        float: right;
+        font-weight: 600;
+    }
+    .phivanchuyen span {
+        float: left;
+    }
+
+    span.price-cart {
+        position: absolute;
+        top: 0px;
+        right: 10px;
+    }
+
+    .bottom-thanhtoan{
+        width: 100%;
+    }
+
+    .ptvc {
+        border: 1px solid #b5b5b5;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+    }
+
+    .thongtingiaohang form {
+        margin-bottom: 15px !important;
+    }
+
+    .thongtingiaohang form input {
+        padding: 8px 15px;
+        border: 1px solid #c7c7c7;
+        border-radius: 8px;
+    }
+
+    .thongtingiaohang form .select-title {
+        user-select: none;
+        font-size: 0.9rem;
+        color: #333;
+    }
+
+    .thongtingiaohang h5 {
+        font-weight: 600;
+    }
+
+    .thongtingiaohang form select {
+        padding: 8px 15px;
+        border: 1px solid #c7c7c7;
+        border-radius: 8px;
+    }
+
+    .row.logo-pay img {
+        margin: 0px 0px 0px 22px;
+    }
+
+    .col-lg-6.col-md-12.thongtingiaohang {
+        height: 100%;
+        border-right: 1px solid #dedede;
+    }
+
+    .review-content {
+        padding-top: 17px;
+    }
+
+    .sanphamlienquan-title {
+        margin-left: 0px;
+    }
+
+    .sanphamlienquan-title h2 {
+        font-size: 1.4rem;
+        font-weight: 600;
+    }
+
+    .sanphamlienquan-title {
+        margin-left: 0px;
+        border-bottom: 1px solid #000;
+        width: 100%;
+    }
+
+    a.article__image img {
+        width: 100%;
+    }
+
+    article.article-card {
+        padding: 0px 0px 15px 0px;
+    }
+
+    .article__info a {
+        color: #000;
+        font-size: 1rem;
+        font-weight: 600;
+        line-height: 0.1rem !important;
+        text-decoration: none;
+    }
+
+    .rte.article__excerpt span {
+        font-size: 0.9rem;
+    }
+
+
+    h3.article__title {
+        line-height: 1.4rem;
+    }
+
+    .sanphamlienquan {
+        display: flex;
+    }
+
+    footer {
+        box-shadow: 0px 0px 23px -13px #000;
+    }
+
+    .reviewer span {
+        font-size: 0.8rem;
+        color: #828282;
+    }
+
+    .product-tuvan button {
+        width: 100%;
+        height: 40px;
+        background-color: #FDDCD9;
+        border: none;
+        font-weight: 600;
+    }
+
+    .product-status span {
+        font-weight: 600;
+    }
+
+    .hilight-right {
+        padding: 0px 0px 0px 60px;
+    }
+
+    .content-2 {
+        padding: 280px 60px;
+    }
+
+    .content-2 h2 {
+        font-weight: 600;
+        font-size: 2.5rem;
+    }
+
+    section.content-3 {
+        background-color: #E5E8ED;
+    }
+
+    .countdownHolder {
+        font-size: 1.5rem !important;
+        width: auto;
+        margin: 0px 0px 0px 20px;
+    }
+
+    .title-sale h2 {
+        margin: 0px;
+        font-weight: 600;
+    }
+
+    h3.sale-title {
+        font-size: 1.3rem;
+        margin: 10px;
+        font-weight: 600;
+    }
+
+    .uu-dai .shop-now {
+        border: 1px solid #000;
+        padding: 8px 10px;
+        margin: 0px;
+        display: -webkit-inline-box;
+        color: #000;
+    }
+
+    .title-lsp {
+        margin: 0px;
+        text-transform: uppercase;
+    }
+
+    .title-lsp h2 {
+        display: -webkit-inline-box;
+        font-weight: 600;
+    }
+
+    .danhmuctungsanpham a {
+        color: #000;
+        margin: 0px 8px;
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+
+    .title-instagram i {
+        font-size: 1.6rem;
+    }
+
+    .img-instagram img {
+        width: 100%;
+    }
+
+    h4.footer-title {
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+
+    .number-phone i {
+        background-color: #ef0000;
+        color: #fff;
+        border-radius: 20px;
+        padding: 10px;
+        font-size: 0.7rem;
+        margin-right: 10px;
+        height: 28px;
+        width: 28px;
+    }
+
+    .subri input {
+        width: 67%;
+        font-size: 0.9rem;
+        padding: 4px 15px;
+        max-height: 30px;
+    }
+
+    .subri button {
+        width: 33%;
+        max-height: 30px;
+        background-color: #000;
+        color: #fff;
+        border: 1px;
+        height: 40px;
+        font-size: 0.9rem;
+    }
+
+    section.footer-as {
+        background-color: #F1F1F1;
+    }
+
+    section.footer-as a {
+        font-weight: 600;
+        color: #000;
+        font-size: 0.9rem;
+        text-decoration: none;
+    }
+
+    .feedback {
+        position: fixed;
+        right: 0px;
+        bottom: 20%;
+        background-color: #C9334E;
+    }
+
+    .feedback a {
+        display: -webkit-inline-box;
+        -moz-transform: translateX(-26%) translateY(158%) rotate(-90deg);
+        -webkit-transform: translateX(-26%) translateY(158%) rotate(-90deg);
+        transform: translateX(-26%) translateY(158%) rotate(-90deg);
+        color: #fff;
+        font-weight: 600;
+        text-decoration: none;
+    }
+
+    .feedback {
+        position: fixed;
+        right: 0px;
+        bottom: 20%;
+        background-color: #C9334E;
+        width: 37px;
+        height: 103px;
+        border-radius: 7px 0px 0px 7px;
+    }
+
+    .footer-as2 span {
+        color: #616161;
+        font-size: 0.9rem;
+    }
+
+    .ft-support a {
+        color: #000;
+        padding: 4px;
+        font-size: 1.5rem;
+    }
+
+    .number-phone {
+        margin: 8px 0px;
+    }
+
+    .number-phone span {
+        font-weight: 600;
+        font-size: 1.4rem;
+    }
+
+    .ft-support>span {
+        font-size: 0.8rem;
+        color: #4c4c4c;
+    }
+
+    .img-instagram>div>div>div {
+        padding: 2px;
+    }
+
+    .row.img-instagram>div {
+        padding: 2px !important;
+        margin: 0px !important;
+    }
+
+    .row.img-instagram>div>div {
+        width: 100%;
+        margin: 0px;
+    }
+
+    .title-instagram h2 {
+        font-weight: 600;
+    }
+
+    .title-instagram h4 {
+        color: #694900;
+        font-weight: 600;
+        letter-spacing: 0.4rem;
+        font-size: 1.3rem;
+    }
+
+    .chuongtrinh-uudai img {
+        width: 100%;
+    }
+
+    .danhmuctungsanpham {
+        display: -webkit-inline-box;
+        margin-left: 18px;
+    }
+
+    .time-sale>span {
+        margin: 8px 0px;
+        display: -webkit-inline-box;
+        font-weight: 600;
+    }
+
+    .san-pham-sale img {
+        width: 100%;
+    }
+
+    .sp-color img {
+        width: 23px;
+        border-radius: 24px;
+        border: 2px solid #ffa9a9;
+        margin-right: 16px;
+    }
+
+    .product-color img {
+        margin-right: 16px;
+    }
+
+    .uu-dai img {
+        width: 100%;
+    }
+
+    .sp-sale-des h4 {
+        font-size: 1rem;
+        margin-top: 7px;
+        font-weight: 600;
+        text-decoration: none;
+        color: #333;
+    }
+
+    span.price-sale {
+        font-size: 1rem;
+        text-decoration: line-through;
+    }
+
+    .sp-sale-des .prices {
+        font-weight: 600;
+        color: #ff0101;
+        font-size: 1.2rem;
+        margin-right: 27px;
+    }
+
+    .sale-bd {
+        position: absolute;
+        top: 0px;
+        left: 13px;
+        background-color: #ff0000b3;
+        color: #fff;
+        padding: 10px 4px;
+        font-size: 0.9rem;
+    }
+
+    .hinh-anh {
+        position: relative;
+    }
+
+    .title-sale .time-sale {
+        display: -webkit-inline-box;
+        margin: 0px 0px 0px 70px;
+    }
+
+    .bl {
+        border-right: 1px solid #8c8c8c;
+    }
+
+    .content-2 button {
+        border: 1px solid #000;
+        padding: 10px 25px;
+        margin: 10px 0px;
+    }
+
+    .s-r-2 {
+        width: 100%;
+        margin: 0px;
+    }
+
+    .slider img{
+        width: 100%;
+        height: auto;
+    }
+
+    nav.navbar {
+        width: 100%;
+        margin-bottom: 0px;
+    }
+
+    nav.navbar a {
+        font-weight: 600;
+        color: #000;
+    }
+
+    .content-title{
+        font-weight: 600;
+    }
+}
+#section_1{
+    margin-top: 100px;
+    width: 100%;
+}
+#section_1 h3{
+    margin-bottom: 50px;
+}
+#section_1 .hilight-right h3 {
+    margin-top: 10px;
+}
+#section_2{
+    margin-top: 80px;
+    width: 100%;
+}
+#section_3 h4{
+   margin-bottom: 50px;
+}
+#section_3 a{
+    padding: 10px 20px;
+    border: 2px solid #8d8e88;
+    float: left;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #000;
+    border-radius: 5px;
+}
+#section_flash_sale{
+    margin-top: 100px;
+}
+#section_flash_sale h2{
+    position: relative;
+    padding-left: 40px;
+}
+#section_flash_sale h2:before{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background: url("../images/flash_sale.jpg") no-repeat;
+    width: 36px;
+    height: 36px;
+    content: '';
+}

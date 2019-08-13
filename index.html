@@ -1,0 +1,838 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Venus</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery.countdown.css">
+    <link rel="stylesheet" href="css/style.css" >
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <style>
+        input.search-input-header {
+            background-color: #ffffff00 !important;
+            box-shadow: none !important;
+        }
+
+        .message-error-buy {
+            color: red;
+            text-align: center;
+            background-color: #ffcfcf;
+            margin-bottom: 5px;
+            font-weight: 600;
+            padding: 6px;
+            display: none;
+        }
+
+        ul.menu-right {
+            list-style: none;
+            display: contents;
+        }
+
+        ul.menu-right ul {
+            list-style: none;
+            display: contents;
+        }
+
+        ul.menu-right li:hover ul {
+            display: block;
+        }
+
+
+        ul.menu-right li>ul {
+            position: absolute;
+            top: 45px;
+            left: -76px;
+            display: none;
+            padding: 0px;
+            width: 200px;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+
+        ul.menu-right li {
+            cursor: pointer;
+            padding: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        ul.menucap2 li {
+            width: 100%;
+            border-bottom: 1px solid #e4e4e4;
+            padding: 10px 20px;
+        }
+
+        ul.menucap2 {
+            box-shadow: 0px 0px 7px -2px #00000040;
+        }
+
+        ul.menu-right a {
+            padding: 0px;
+        }
+
+        button.btn-close-notifi {
+            position: absolute;
+            top: 3px;
+            right: 15px;
+            background-color: #fff0;
+            border: none;
+            text-transform: uppercase;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+
+        ul.giohang {
+            width: 300px !important;
+            padding: 10px !important;
+            right: -15px !important;
+            left: unset !important;
+            box-shadow: 0px 0px 8px -3px #00000052;
+            border-radius: 5px;
+        }
+
+
+        .cart-empty {
+            background-size: 55%;
+            height: 200px;
+            background-position: center 20%;
+            background-repeat: no-repeat;
+            text-align: center;
+        }
+
+        .cart-empty span {
+            font-size: 0.9rem;
+            color: #7d7d7d;
+            padding-top: 125px;
+            display: block;
+        }
+
+        .nhomsize>.select {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .product-size span{
+            font-size: 0.9rem;
+            padding: 10px;
+        }
+
+        @media (min-width: 1200px){
+            .product-size span {
+                margin-right: 0px !important;
+                cursor: pointer;
+            }
+        }
+
+    </style>
+    <style>
+        @media (min-width: 1200px) {
+            nav.navbar {
+                width: 100%;
+                margin-bottom: -92px;
+            }
+
+            .container {
+                max-width: 98%;
+            }
+        }
+        header {
+            box-shadow: none !important;
+        }
+
+        .title-lsp a {
+            color: #333;
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+<header>
+    <div class="text-center topnav" style="display:none"><span>MIỄN PHÍ VẬN CHUYỂN VỚI ĐƠN HÀNG TỪ 700.000Đ</span><button class="btn-close-notifi">x</button></div>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand logo" href="http://demo.dreamresort.xyz/public"><img src="http://demo.dreamresort.xyz/public/img/logo.png" alt="Venus"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">SHOP <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">ÁO LÓT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">QUẦN LÓT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">SALE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">SET ĐỒ LÓT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">ĐỒ NGỦ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://demo.dreamresort.xyz/public/tin-tuc">TIN TỨC</a>
+                </li>
+            </ul>
+            <div class="form-inline my-2 my-lg-0">
+                <form class="" action="http://demo.dreamresort.xyz/public/tim-kiem">
+                    <button class="btn my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
+                    <input class="form-control mr-sm-2 search-input-header" type="search" name="k" placeholder="Bạn cần tìm gì ?" aria-label="Search">
+                </form>
+                <ul class="menu-right">
+                    <li><i class="fa fa-user"></i>
+                        <ul class="menucap2">
+                            <li><a href="http://demo.dreamresort.xyz/public/login">Đăng nhập</a></li>
+                            <li><a href="http://demo.dreamresort.xyz/public/register">Đăng ký</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <i class="fa fa-shopping-cart"></i>
+                        <ul class="giohang">
+                            <div class="cart-empty" style="background-image:url('http://demo.dreamresort.xyz/public/img/cartEmpty.png')">
+                                <span>Giỏ hàng không có sản phẩm nào. Hãy bắt đầu chọn sản phẩm đầu tiên</span>
+                            </div>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<section class="slider">
+    <img src="http://demo.dreamresort.xyz/public/img/backgound-img.jpg">
+</section>
+
+<section id="section_1" class="d-none d-lg-block ">
+    <div class="container-ful ">
+        <div class="row s-r-2 mt-4 mb-4">
+            <div class="col-lg-6 col-md-6 hilight-left">
+                <div class="text-center pl-5 pr-5 pb-3 pt-3">
+                    <h3>DOES YOUR BRA MAKE YOU FEEL GOOD ?</h3>
+                    <p>Blah Blah Blah</p>
+                </div><div class="img-box"><img src="images/banner1.jpg"> </div>
+
+            </div>
+            <div class="col-lg-6 col-md-6 hilight-right">
+
+                <div class="img-box"><img src="images/banner2.jpg"> </div>
+                <div class="text-center pl-5 pr-5 pb-3 pt-3">
+                    <h3>DOES YOUR BRA MAKE YOU FEEL GOOD ?</h3>
+                    <p>Blah Blah Blah</p>
+                </div></div>
+        </div>
+    </div>
+</section>
+
+<section  id="section_2" class="d-none d-lg-block ">
+    <div class="container-ful" style="background-image: url('http://demo.dreamresort.xyz/public/img/backgound-img2.jpg'); background-size: cover; background-repeat: no-repeat;">
+        <div class="row m-0 p-0">
+            <div class="col-lg-6 col-md-12">
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="text-left content-2">
+                    <h2>The best bra is one you never think about</h2>
+                    <button>SHOP NOW</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="section_3" class="content-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-12 col-6 text-center bl p-3 mt-5 mb-5">
+                <h4>Hỗ trợ đổi trả <br>Khi không vừa size</h4>
+
+                <a href="">Download our iPhone app</a>
+            </div>
+            <div class="col-lg-4 col-md-12 col-6 text-center bl p-3 mt-5 mb-5">
+                <h4>Bảo hành sản phẩm<br>Trong 30 ngày</h4>
+                <a href="">Download our iPhone app</a>
+
+            </div>
+            <div class="col-lg-4 col-md-12 text-center p-3 mt-5 mb-5 d-none d-lg-block ">
+                <h4>Cam kết<br>Sản phẩm như hình</h4>
+                <a href="">Download our iPhone app</a>
+
+            </div>
+        </div>
+    </div>
+</section>
+<section id="section_flash_sale" class="sales">
+    <div class="container">
+        <div class="row title-sale">
+            <h2>FLASH SALE</h2>
+            <div class="time-sale">
+                <span>KẾT THÚC SAU</span>
+                <div id="countdown-sale"></div>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-lg-3 col-md-6 pb-4 pl-1 pr-1 mt-0">
+                <div class="san-pham-sale">
+                    <div class="hinh-anh">
+                        <img src="http://demo.dreamresort.xyz/public/img/product/venus-charm-ao-lot-khong-gong-2.jpg">
+                        <div class="sale-bd">SALE</div>
+                    </div>
+                    <div class="sp-sale-des">
+                        <h4>Set T311053 xanh</h4>
+                        <span class="prices">350.000 đ</span>
+                        <span class="price-sale">399.000 đ</span>
+                        <div class="sp-color">
+                            <img src="http://demo.dreamresort.xyz/public/img/product/pro-color.jpg" >
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 pb-4 pl-1 pr-1 mt-0">
+                <div class="san-pham-sale">
+                    <div class="hinh-anh">
+                        <img src="http://demo.dreamresort.xyz/public/img/product/venus-charm-ao-lot-khong-gong-2.jpg">
+                        <div class="sale-bd">SALE</div>
+                    </div>
+                    <div class="sp-sale-des">
+                        <h4>Set T311053 xanh</h4>
+                        <span class="prices">350.000 đ</span>
+                        <span class="price-sale">399.000 đ</span>
+                        <div class="sp-color">
+                            <img src="http://demo.dreamresort.xyz/public/img/product/pro-color.jpg" >
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 pb-4 pl-1 pr-1 mt-0">
+                <div class="san-pham-sale">
+                    <div class="hinh-anh">
+                        <img src="http://demo.dreamresort.xyz/public/img/product/venus-charm-ao-lot-khong-gong-2.jpg">
+                        <div class="sale-bd">SALE</div>
+                    </div>
+                    <div class="sp-sale-des">
+                        <h4>Set T311053 xanh</h4>
+                        <span class="prices">350.000 đ</span>
+                        <span class="price-sale">399.000 đ</span>
+                        <div class="sp-color">
+                            <img src="http://demo.dreamresort.xyz/public/img/product/pro-color.jpg" >
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 pb-4 pl-1 pr-1 mt-0">
+                <div class="san-pham-sale">
+                    <div class="hinh-anh">
+                        <img src="http://demo.dreamresort.xyz/public/img/product/venus-charm-ao-lot-khong-gong-2.jpg">
+                        <div class="sale-bd">SALE</div>
+                    </div>
+                    <div class="sp-sale-des">
+                        <h4>Set T311053 xanh</h4>
+                        <span class="prices">350.000 đ</span>
+                        <span class="price-sale">399.000 đ</span>
+                        <div class="sp-color">
+                            <img src="http://demo.dreamresort.xyz/public/img/product/pro-color.jpg" >
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="row text-center mb-4">
+            <h2 class="content-title">ƯU ĐÃI TRONG TUẦN</h2>
+        </div>
+        <div class="row text-center">
+            <div class="col-lg-4 col-md-6 pb-4 uu-dai">
+                <img src="http://demo.dreamresort.xyz/public/img/sales/sales1.JPG">
+                <h3 class="sale-title">SALE 50% ĐÓN HÈ</h3>
+                <a href="#" class="shop-now">SHOP NOW</a>
+            </div>
+            <div class="col-lg-4 col-md-6 pb-4 uu-dai">
+                <img src="http://demo.dreamresort.xyz/public/img/sales/sales1.JPG">
+                <h3 class="sale-title">SALE 50% ĐÓN HÈ</h3>
+                <a href="#" class="shop-now">SHOP NOW</a>
+            </div>
+            <div class="col-lg-4 col-md-6 pb-4 uu-dai">
+                <img src="http://demo.dreamresort.xyz/public/img/sales/sales1.JPG">
+                <h3 class="sale-title">SALE 50% ĐÓN HÈ</h3>
+                <a href="#" class="shop-now">SHOP NOW</a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="mt-4">
+    <div class="container">
+        <div class="row mb-4">
+            <div class="title-lsp">
+                <h2><a href="http://demo.dreamresort.xyz/public/danh-muc/ao-lot">Áo lót</a></h2>
+                <div class="danhmuctungsanpham">
+                    <a style="text-transform: uppercase" href="http://demo.dreamresort.xyz/public/danh-muc/co-gong">Có gọng</a>
+                    <a style="text-transform: uppercase" href="http://demo.dreamresort.xyz/public/danh-muc/khong-gong">Không gọng</a>
+                    <a style="text-transform: uppercase" href="http://demo.dreamresort.xyz/public/danh-muc/dem-day">Đệm dày</a>
+                    <a style="text-transform: uppercase" href="http://demo.dreamresort.xyz/public/danh-muc/dem-vua">Đệm vừa</a>
+                    <a style="text-transform: uppercase" href="http://demo.dreamresort.xyz/public/danh-muc/dem-mong">Đệm mỏng</a>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-lg-3 col-md-6 pb-4 pl-1 pr-1 m-0">
+                <div class="san-pham-sale">
+                    <a href="http://demo.dreamresort.xyz/public/san-pham/set-t311053-hong" title="Set T311053 hồng">
+                        <div class="hinh-anh">
+                            <img src="http://demo.dreamresort.xyz/public/uploads/venus-charm-ao-lot-khong-gong-3.jpg">
+                        </div>
+                        <div class="sp-sale-des">
+                            <h4>Set T311053 hồng</h4>
+                            <span class="prices">399,000 đ</span>
+                            <div class="sp-color">
+                                <img src="http://demo.dreamresort.xyz/public/uploads/venus-charm-ao-lot-khong-gong-3_5d42c2723ea9e.jpg">
+                                <img src="http://demo.dreamresort.xyz/public/uploads/venus-charm-ao-lot-khong-gong-6.jpg">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row m-5 chuongtrinh-uudai">
+            <div class="col-lg-6 col-md-12 m-0">
+                <img src="http://demo.dreamresort.xyz/public/img/sales/sales2.JPG">
+            </div>
+            <div class="col-lg-6 col-md-12 pb-4">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 pb-4">
+                        <img src="http://demo.dreamresort.xyz/public/img/sales/sales3.JPG">
+                    </div>
+                    <div class="col-lg-6 col-md-6 pb-4">
+                        <img src="http://demo.dreamresort.xyz/public/img/sales/sales3.JPG">
+                    </div>
+                    <div class="col-lg-6 col-md-6 pb-4">
+                        <img src="http://demo.dreamresort.xyz/public/img/sales/sales3.JPG">
+                    </div>
+                    <div class="col-lg-6 col-md-6 pb-4">
+                        <img src="http://demo.dreamresort.xyz/public/img/sales/sales3.JPG">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="mt-4">
+    <div class="container">
+        <div class="row mb-4">
+            <div class="title-lsp">
+                <h2><a href="http://demo.dreamresort.xyz/public/danh-muc/quan-lot">Quần lót</a></h2>
+                <div class="danhmuctungsanpham">
+                    <a style="text-transform: uppercase" href="http://demo.dreamresort.xyz/public/danh-muc/cotton">Cotton</a>
+                    <a style="text-transform: uppercase" href="http://demo.dreamresort.xyz/public/danh-muc/ren">Ren</a>
+                    <a style="text-transform: uppercase" href="http://demo.dreamresort.xyz/public/danh-muc/khong-vien">Không viền</a>
+                    <a style="text-transform: uppercase" href="http://demo.dreamresort.xyz/public/danh-muc/lot-khe">Lọt khe</a>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-lg-3 col-md-6 pb-4 pl-1 pr-1 m-0">
+                <div class="san-pham-sale">
+                    <a href="http://demo.dreamresort.xyz/public/san-pham/set-t311053-hong" title="Set T311053 hồng">
+                        <div class="hinh-anh">
+                            <img src="http://demo.dreamresort.xyz/public/uploads/venus-charm-ao-lot-khong-gong-3.jpg">
+                        </div>
+                        <div class="sp-sale-des">
+                            <h4>Set T311053 hồng</h4>
+                            <span class="prices">399,000 đ</span>
+                            <div class="sp-color">
+                                <img src="http://demo.dreamresort.xyz/public/uploads/venus-charm-ao-lot-khong-gong-3_5d42c2723ea9e.jpg">
+                                <img src="http://demo.dreamresort.xyz/public/uploads/venus-charm-ao-lot-khong-gong-6.jpg">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row m-5 chuongtrinh-uudai">
+            <div class="col-lg-6 col-md-12 m-0">
+                <img src="http://demo.dreamresort.xyz/public/img/sales/sales2.JPG">
+            </div>
+            <div class="col-lg-6 col-md-12 pb-4">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 pb-4">
+                        <img src="http://demo.dreamresort.xyz/public/img/sales/sales3.JPG">
+                    </div>
+                    <div class="col-lg-6 col-md-6 pb-4">
+                        <img src="http://demo.dreamresort.xyz/public/img/sales/sales3.JPG">
+                    </div>
+                    <div class="col-lg-6 col-md-6 pb-4">
+                        <img src="http://demo.dreamresort.xyz/public/img/sales/sales3.JPG">
+                    </div>
+                    <div class="col-lg-6 col-md-6 pb-4">
+                        <img src="http://demo.dreamresort.xyz/public/img/sales/sales3.JPG">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="mb-4">
+    <div class="container">
+        <div class="row">
+            <div class="title-instagram text-center">
+                <span><i class="fa fa-instagram"></i></span>
+                <h2>SHOP OUR INSTAGRAM</h2>
+                <h4>#venus</h4>
+            </div>
+        </div>
+        <div class="row img-instagram">
+            <div class="col-lg-4 col-md-12 m-0 p-0">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <img src="http://demo.dreamresort.xyz/public/img/instagram/ins-5.JPG">
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <img src="http://demo.dreamresort.xyz/public/img/instagram/ins-2.JPG">
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <img src="http://demo.dreamresort.xyz/public/img/instagram/ins-3.JPG">
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <img src="http://demo.dreamresort.xyz/public/img/instagram/ins-4.JPG">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12">
+                <img src="http://demo.dreamresort.xyz/public/img/instagram/ins-1.JPG">
+            </div>
+            <div class="col-lg-4 col-md-12">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <img src="http://demo.dreamresort.xyz/public/img/instagram/ins-2.JPG">
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <img src="http://demo.dreamresort.xyz/public/img/instagram/ins-5.JPG">
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <img src="http://demo.dreamresort.xyz/public/img/instagram/ins-3.JPG">
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <img src="http://demo.dreamresort.xyz/public/img/instagram/ins-4.JPG">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="pt-5 mt-5">
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-12 m-0">
+                    <div class="ft-support">
+                        <h4 class="footer-title">GỌI MUA HÀNG (08:30-21:30)</h4>
+                        <div class="number-phone"><i class="fa fa-phone"></i><span>1800 1162</span></div>
+                        <span>Tất cả các ngày trong tuần</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-12 m-0">
+                    <div class="ft-support">
+                        <h4 class="footer-title">GÓP Ý, KHIẾU NẠI (08:30-20:30)</h4>
+                        <div class="number-phone"><i class="fa fa-phone"></i><span>1800 1160</span></div>
+                        <span>Tất cả các ngày trong tuần (trừ ngày lễ)</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-12 m-0">
+                    <div class="ft-support">
+                        <h4 class="footer-title">ĐĂNG KÝ NHẬN THÔNG TIN MỚI TỪ VENUS</h4>
+                        <div class="subri"><input type="text" placeholder="Nhập email của bạn tại đây ..."><button>Đăng ký</button></div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-12 m-0">
+                    <div class="ft-support">
+                        <h4 class="footer-title">LIKE VENUS TRÊN MẠNG XÃ HỘI</h4>
+                        <a href="#"><i class="fa fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-youtube"></i></a>
+                        <a href="#"><i class="fa fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+    <section class="footer-as pt-3 pb-3 mt-5">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-lg-3 col-md-12 m-0">
+                    <a href="#">HỖ TRỢ KHÁCH HÀNG</a>
+                </div>
+                <div class="col-lg-3 col-md-12 m-0">
+                    <a href="#">VỀ VENUS</a>
+                </div>
+                <div class="col-lg-3 col-md-12 m-0">
+                    <a href="#">HỆ THỐNG CỬA HÀNG</a>
+                </div>
+                <div class="col-lg-3 col-md-12 m-0">
+                    <a href="#">FANPAGE CỦA CHÚNG TÔI</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container footer-as2 text-center">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 m-0 p-2">
+                    <span>2019 VENUS. Công ty cổ phần</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="feedback">
+        <a href="#"><div class="inner rotate">Feedback</div></a>
+    </div>
+</footer>
+
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js" ></script>
+<script src="js/jquery.countdown.js"></script>
+<script type="text/javascript" src="js/rangeslider.js"></script>
+<script>
+    var ts = new Date(2020,06,04);
+
+    if((new Date()) > ts){
+    }
+
+
+    jQuery('#countdown-sale').countdown({
+        timestamp	: ts,
+    });
+</script>
+<script>
+
+    $('.backstep').click(function () {
+        $('.range-slider').css('display','block');
+        $('.khongcosize').css('display','none');
+        $('.sizecuaban').css('display','none');
+    });
+
+    $('.btn-dosize').click(function () {
+        console.log($('input[name="participants"]').val());
+        console.log($('input[name="participants2"]').val());
+        console.log($('input[name="participants3"]').val());
+
+        $.ajax({
+            url: 'http://demo.dreamresort.xyz/public/admin/sizeao/checksize',
+            type: 'post',
+            data: {
+                'chieucao': $('input[name="participants"]').val(),
+                'cannang': $('input[name="participants2"]').val(),
+                'kichthuocv1': $('input[name="participants3"]').val(),
+                "_token": "b3n8RtINUHFtmi1573miUPavGrSnxKxV2CZ9ixVY"
+            },
+        }).done(function (data) {
+            if(data.status){
+                if(data.data != 0){
+                    $('.size-cuaban>span').html(data.data);
+                    $('.desc strong').html(data.data);
+
+                    $('.range-slider').css('display','none');
+                    $('.khongcosize').css('display','none');
+                    $('.sizecuaban').css('display','block');
+                }else{
+                    $('.size-cuaban>span').html('XIN LỖI');
+                    $('.range-slider').css('display','none');
+                    $('.khongcosize').css('display','block');
+                    $('.sizecuaban').css('display','none');
+                }
+            }
+        })
+    });
+
+    $('.btn-close-dosize').click(function () {
+        $('.dosize').css('display','none');
+        $('.mask').css('display','none');
+        $('body').css('overflow-y','auto');
+    })
+
+    $('.mask').click(function () {
+        $('.dosize').css('display','none');
+        $('.mask').css('display','none');
+        $('body').css('overflow-y','auto');
+    })
+
+    $('.product-dosize span').click(function () {
+        $('.dosize').css('display','block');
+        $('.mask').css('display','block');
+        // $('body').css('overflow-y','hidden');
+
+        $('.range-slider').css('display','block');
+        $('.khongcosize').css('display','none');
+        $('.sizecuaban').css('display','none');
+    })
+
+    $('input[name="participants"]').rangeslider({
+        polyfill: false,
+        onInit: function () {
+            $handle = $('.rangeslider-group1 .rangeslider__handle');
+            updateHandle($handle[0], this.value);
+        }
+    }).on('input', function () {
+        updateHandle($handle[0], this.value);
+    });
+
+    $('input[name="participants2"]').rangeslider({
+        polyfill: false,
+        onInit: function () {
+            $handle2 = $('.rangeslider-group2 .rangeslider__handle');
+            updateHandle($handle2[0], this.value);
+        }
+    }).on('input', function () {
+        updateHandle($handle2[0], this.value);
+    });
+
+    $('input[name="participants3"]').rangeslider({
+        polyfill: false,
+        onInit: function () {
+            $handle3 = $('.rangeslider-group3 .rangeslider__handle');
+            updateHandle($handle3[0], this.value);
+        }
+    }).on('input', function () {
+        updateHandle($handle3[0], this.value);
+    });
+
+    // Update the value inside the slider handle
+    function updateHandle(el, val) {
+        el.textContent = val;
+    }
+
+
+    $(document).ready(function () {
+        $hidden = 0;
+        $('.nhomhinhanh').each(function () {
+            if($hidden >0){
+                $(this).css('display','none');
+            }
+            $hidden++;
+        });
+
+        $hidden = 0;
+        $('.nhomsize').each(function () {
+            if($hidden >0){
+                $(this).css('display','none');
+            }
+            $hidden++;
+        });
+        $hidden = 0;
+        $('.colort').each(function () {
+            if($hidden >0){
+                $(this).css('display','none');
+            }
+            $hidden++;
+        });
+
+        $hidden = 0;
+        $('.pickcolor').each(function () {
+            if($hidden == 0){
+                $(this).addClass('pick');
+            }
+            $hidden++;
+        });
+    })
+
+
+    $('.product-buy button').click(function () {
+        //Lay mau
+        $nhommau = $('.pickcolor.pick').attr('idnhom');
+        //Lay size
+        $size = $('.nhomsize>span.select').html();
+        if($size == undefined){
+            $('.message-error-buy span').html('Hãy chọn size trước khi mua');
+            $('.message-error-buy').css('display','block');
+        }else if( $nhommau == undefined){
+            $('.message-error-buy span').html('Hãy chọn màu trước khi mua');
+            $('.message-error-buy').css('display','block');
+        }else{
+            $('.message-error-buy').css('display','none');
+        }
+
+        //Call thêm vào giỏ hàng
+        $.ajax({
+            url: 'http://demo.dreamresort.xyz/public/addtocart',
+            type: 'post',
+            data: {
+                'mausanpham': $nhommau,
+                'size': $size,
+                "_token": "b3n8RtINUHFtmi1573miUPavGrSnxKxV2CZ9ixVY"
+            },
+        }).done(function (data) {
+            if(data.status){
+
+            }
+        })
+
+    })
+
+    $('.pickcolor').click(function () {
+
+        $('.nhomsize span').each(function () {
+            $(this).removeClass('select');
+            $(this).removeAttr('selected');
+        })
+        $('.pickcolor').removeClass('pick');
+        $('.nhomhinhanh').css('display','none');
+        $('.nhomsize').css('display','none');
+        $('.colort').css('display','none');
+
+        $(this).addClass('pick');
+
+        $idnhomhinh = $(this).attr('idnhom');
+        $('.nh-'+$idnhomhinh).css('display','block');
+        $('.nhsize-'+$idnhomhinh).css('display','block');
+        $('.colortext-'+$idnhomhinh).css('display','initial');
+    })
+
+
+    $('.btn-close-notifi').click(function(){
+        $('.topnav').css('display','none');
+        localStorage.setItem('topnav',true)
+    });
+
+    $('.nhomsize span').click(function(){
+        $this = $(this);
+        $('.nhomsize span').each(function () {
+            $(this).removeClass('select');
+            $(this).removeAttr('selected');
+        })
+        $this.addClass('select');
+        $this.attr('selected','true');
+    });
+
+    $(document).ready(function(){
+        if(localStorage.getItem('topnav')){
+            $('.topnav').css('display','none');
+        }else{
+            $('.topnav').css('display','block');
+        }
+    })
+
+
+</script>
+</body>
+</html>
